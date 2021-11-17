@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="doctorViewContext" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoctorViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="4.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text=" Doctor View">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDoctor" layoutX="5.0" layoutY="70.0" prefHeight="581.0" prefWidth="929.0" styleClass="column-header" stylesheets="@../style/styles.css">
+         <columns>
+            <TableColumn fx:id="colDId" prefWidth="96.0" text="DID" />
+            <TableColumn fx:id="colDName" prefWidth="247.0" text="Name" />
+            <TableColumn fx:id="colDAge" prefWidth="72.0" text="Age" />
+            <TableColumn fx:id="colDGender" prefWidth="68.0" text="Gender" />
+            <TableColumn fx:id="colDAddress" prefWidth="187.0" text="Address" />
+            <TableColumn fx:id="colDContact" prefWidth="87.0" text="Contact" />
+            <TableColumn fx:id="colDSpecialize" text="Specialize" />
+            <TableColumn fx:id="colDFees" prefWidth="91.0" text="Fees" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="manageDoctor" layoutX="748.0" layoutY="666.0" onAction="#manageDoctor_OnAction" prefHeight="40.0" prefWidth="178.0" styleClass="button-nurse" stylesheets="@../style/styles.css" text=" Manage Doctor">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

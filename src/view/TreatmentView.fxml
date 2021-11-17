@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="treatmentViewContext" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TreatmentViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="6.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text=" Treatment View" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTreatment" layoutX="6.0" layoutY="73.0" prefHeight="581.0" prefWidth="928.0" styleClass="column-header" stylesheets="@../style/styles.css">
+         <columns>
+            <TableColumn fx:id="colTId" prefWidth="156.0" text="TID" />
+            <TableColumn fx:id="colTreatment" prefWidth="546.0" text="Treatment" />
+            <TableColumn fx:id="colTFee" prefWidth="225.0" text="Treatment Fee" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="manageTreatment" layoutX="723.0" layoutY="667.0" onAction="#manageTreatment_OnAction" prefHeight="40.0" prefWidth="210.0" styleClass="button-nurse" stylesheets="@../style/styles.css" text=" Manage Treatment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

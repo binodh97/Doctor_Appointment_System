@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="appointmentViewContext" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="7.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text="Appointments View" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAppointments" layoutX="7.0" layoutY="100.0" prefHeight="610.0" prefWidth="928.0">
+         <columns>
+            <TableColumn fx:id="colAId" prefWidth="90.0" text="AId" />
+            <TableColumn fx:id="colPId" prefWidth="97.0" text="PId" />
+            <TableColumn fx:id="colPName" prefWidth="108.0" text="P Name" />
+            <TableColumn fx:id="colDId" text="DId" />
+            <TableColumn fx:id="colDName" prefWidth="149.0" text="D Name" />
+            <TableColumn fx:id="colNDate" text="N Date" />
+            <TableColumn fx:id="colNTime" prefWidth="76.0" text="N Time" />
+            <TableColumn fx:id="colADate" prefWidth="85.0" text="A Date" />
+            <TableColumn fx:id="colATime" prefWidth="70.0" text="A Time" />
+            <TableColumn fx:id="colCost" prefWidth="92.0" text="Cost" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

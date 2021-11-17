@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="TreatmentContext" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TreatmentManageViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text="Manage Treatment" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <Pane layoutX="11.0" layoutY="76.0" prefHeight="228.0" prefWidth="917.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <AnchorPane layoutX="20.0" layoutY="23.0" prefHeight="45.0" prefWidth="150.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtTId" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="126.0" promptText="T00-001" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Treat ID" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="188.0" layoutY="23.0" prefHeight="47.0" prefWidth="387.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtTreat" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="364.0" promptText="Blood Test" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Treatment" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="610.0" layoutY="23.0" prefHeight="47.0" prefWidth="251.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtTFee" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="222.0" promptText="000.00" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Treatment Fee" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="85.0" layoutY="139.0" prefHeight="47.0" prefWidth="150.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtTrSearch" layoutX="13.0" layoutY="8.0" onAction="#treatSearch_OnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="98.0" promptText="T00-001" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Search Treatment" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/SearchIcon.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="255.0" layoutY="137.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="0.0" />
+            <JFXButton fx:id="clear" layoutX="340.0" layoutY="140.0" onAction="#btnClearDetail_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-search" stylesheets="@../style/styles.css" text="Clear">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="delete" layoutX="482.0" layoutY="140.0" onAction="#btnDeleteTreat_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-delete" stylesheets="@../style/styles.css" text="Delete">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="update" layoutX="625.0" layoutY="140.0" onAction="#btnUpdateTreat_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-update" stylesheets="@../style/styles.css" text="Update">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="save" layoutX="769.0" layoutY="140.0" onAction="#btnSaveTreat_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-save" stylesheets="@../style/styles.css" text="Save">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tblTreatment" layoutX="7.0" layoutY="357.0" prefHeight="352.0" prefWidth="928.0" styleClass="column-header" stylesheets="@../style/styles.css">
+         <columns>
+            <TableColumn fx:id="colTId" prefWidth="156.0" text="TID" />
+            <TableColumn fx:id="colTreatment" prefWidth="546.0" text="Treatment" />
+            <TableColumn fx:id="colTFee" prefWidth="225.0" text="Treatment Fee" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

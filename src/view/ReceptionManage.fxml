@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="receptionManage" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReceptionManageController">
+   <children>
+      <Pane layoutX="6.0" layoutY="77.0" prefHeight="302.0" prefWidth="926.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <AnchorPane layoutX="20.0" layoutY="23.0" prefHeight="45.0" prefWidth="150.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRId" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="126.0" promptText="R00-001" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Reception ID" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="188.0" layoutY="23.0" prefHeight="47.0" prefWidth="552.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="517.0" promptText="Sanduni Kodikara" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Reception Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="759.0" layoutY="23.0" prefHeight="47.0" prefWidth="126.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRAge" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="98.0" promptText="**" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text=" Age" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="86.0" prefHeight="47.0" prefWidth="150.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRGender" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="98.0" promptText="M/F" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text=" Gender" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="187.0" layoutY="87.0" prefHeight="47.0" prefWidth="698.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRAddress" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="670.0" promptText="123,Road,Town" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text=" Address" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="150.0" prefHeight="47.0" prefWidth="179.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRContact" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="157.0" promptText="0**-1234567" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text=" Contact" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="213.0" layoutY="151.0" prefHeight="47.0" prefWidth="255.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRMail" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="230.0" promptText="sanduni@gmail.com" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text=" Mail" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="85.0" layoutY="234.0" prefHeight="47.0" prefWidth="150.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRSearch" layoutX="13.0" layoutY="8.0" onAction="#receptionSearch_OnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="98.0" promptText="R00-001" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Search Reception" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="35.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/SearchIcon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="cancel" layoutX="293.0" layoutY="238.0" onAction="#btnCancelDetailOnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-search" stylesheets="@../style/styles.css" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="delete" layoutX="439.0" layoutY="238.0" onAction="#btnDeleteReception_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-delete" stylesheets="@../style/styles.css" text="Delete">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="update" layoutX="597.0" layoutY="238.0" onAction="#btnUpdateReception_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-update" stylesheets="@../style/styles.css" text="Update">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="save" layoutX="759.0" layoutY="238.0" onAction="#btnSaveReception_OnAction" prefHeight="40.0" prefWidth="126.0" styleClass="button-save" stylesheets="@../style/styles.css" text="Save">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="255.0" layoutY="232.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="0.0" />
+            <AnchorPane layoutX="479.0" layoutY="151.0" prefHeight="47.0" prefWidth="198.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRUserName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="179.0" promptText="sanduni****" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="User-Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="687.0" layoutY="151.0" prefHeight="47.0" prefWidth="198.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtRPassword" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="179.0" promptText="**********" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Password" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text="Manage Reception" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblReception" layoutX="6.0" layoutY="396.0" prefHeight="302.0" prefWidth="926.0" styleClass="column-header" stylesheets="@../style/styles.css">
+        <columns>
+          <TableColumn fx:id="colRId" prefWidth="120.0" text="RID" />
+          <TableColumn fx:id="colRName" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="colRAge" prefWidth="81.0" text="Age" />
+            <TableColumn fx:id="colRGender" text="Gender" />
+            <TableColumn fx:id="colRAddress" prefWidth="240.0" text="Address" />
+            <TableColumn fx:id="colRContact" prefWidth="123.0" text="Contact" />
+            <TableColumn fx:id="colRMail" prefWidth="150.0" text="Mail" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

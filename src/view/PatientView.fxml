@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="patientViewContext" prefHeight="715.0" prefWidth="942.0" styleClass="linear-Apane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text="Patient View" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPatient" layoutX="9.0" layoutY="70.0" prefHeight="580.0" prefWidth="926.0" styleClass="column-header" stylesheets="@../style/styles.css">
+         <columns>
+            <TableColumn fx:id="colPId" prefWidth="90.0" text="PID" />
+            <TableColumn fx:id="colPName" prefWidth="177.0" text="Name" />
+            <TableColumn fx:id="colPAge" prefWidth="52.0" text="Age" />
+            <TableColumn fx:id="colPGender" prefWidth="68.0" text="Gender" />
+            <TableColumn fx:id="colPAddress" prefWidth="187.0" text="Address" />
+            <TableColumn fx:id="colPContact" prefWidth="145.0" text="Contact" />
+            <TableColumn fx:id="colPMail" prefWidth="221.0" text="E-Mail" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="managePatient" layoutX="739.0" layoutY="664.0" onAction="#managePatient_OnAction" prefHeight="40.0" prefWidth="178.0" styleClass="button-nurse" stylesheets="@../style/styles.css" text=" Manage Patient">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

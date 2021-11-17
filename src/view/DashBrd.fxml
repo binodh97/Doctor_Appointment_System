@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBrdContext" prefHeight="781.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBrdController">
+   <children>
+      <AnchorPane fx:id="buttonPane" layoutX="4.0" layoutY="61.0" prefHeight="715.0" prefWidth="174.0" styleClass="linear-pane" stylesheets="@../style/styles.css">
+         <children>
+            <JFXButton fx:id="patient" buttonType="RAISED" layoutX="4.0" layoutY="5.0" onAction="#patientsMange_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-patient" stylesheets="@../style/styles.css" text="     Patient">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="doctor" buttonType="RAISED" layoutX="4.0" layoutY="293.0" onAction="#manageDoctor_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-patient" stylesheets="@../style/styles.css" text="    Doctor">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="nurse" buttonType="RAISED" layoutX="4.0" layoutY="350.0" onAction="#manageNurse_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-nurse" stylesheets="@../style/styles.css" text="   Nurse">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="appointment" buttonType="RAISED" layoutX="4.0" layoutY="62.0" onAction="#appointmentManage_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-appointment" stylesheets="@../style/styles.css" text="        Appointment">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="treatment" buttonType="RAISED" layoutX="4.0" layoutY="176.0" onAction="#treatmentManage_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-treatment" stylesheets="@../style/styles.css" text="   Treatment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="report" buttonType="RAISED" layoutX="4.0" layoutY="407.0" prefHeight="50.0" prefWidth="165.0" styleClass="button-report" stylesheets="@../style/styles.css" text="    Report">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logOut" buttonType="RAISED" layoutX="3.0" layoutY="660.0" onAction="#logOut_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-LogOut" stylesheets="@../style/styles.css" text="     Log Out">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="7.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/AppointmentIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="6.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NurseIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="9.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/DoctorIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/PatientIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="8.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/TreatmentIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/ReportsIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="669.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/LogOutIcon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="AppointmentView" buttonType="RAISED" layoutX="3.0" layoutY="118.0" onAction="#appointmentView_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-treatment" stylesheets="@../style/styles.css" text="Appointment View">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="helpView" buttonType="RAISED" layoutX="3.0" layoutY="465.0" prefHeight="50.0" prefWidth="165.0" styleClass="button-report" stylesheets="@../style/styles.css" text="Help">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="addTreatment" buttonType="RAISED" layoutX="3.0" layoutY="234.0" onAction="#addTreatment_OnAction" prefHeight="50.0" prefWidth="165.0" styleClass="button-treatment" stylesheets="@../style/styles.css" text="Treatment Manage">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/help.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="mainBar" alignment="TOP_LEFT" layoutX="4.0" layoutY="5.0" prefHeight="51.0" prefWidth="1121.0" styleClass="linear-titleM" stylesheets="@../style/styles.css" text="Doctor Appointment System" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="38.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="rootPane" layoutX="182.0" layoutY="61.0" prefHeight="715.0" prefWidth="942.0" style="-fx-background-radius: 5;" styleClass="linear-Apane" stylesheets="@../style/styles.css">
+         <children>
+            <ImageView fitHeight="667.0" fitWidth="929.0" layoutX="3.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Nurse%20(2).png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label fx:id="lblDate" layoutX="809.0" layoutY="14.0" prefHeight="33.0" prefWidth="138.0" text="2021-09-01">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="983.0" layoutY="12.0" prefHeight="34.0" prefWidth="127.0" text="11.23.10" textFill="#110000">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="966.0" layoutY="13.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="0.0" style="-fx-background-color: WHITE;" />
+   </children>
+</AnchorPane>

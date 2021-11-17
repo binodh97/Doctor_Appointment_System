@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="942.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentManageViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" stylesheets="@../style/styles.css" text="Add  Appointment " textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAppointment" layoutX="9.0" layoutY="484.0" prefHeight="159.0" prefWidth="920.0" styleClass="column-header" stylesheets="@../style/styles.css">
+        <columns>
+            <TableColumn fx:id="colPId" minWidth="1.0" prefWidth="12.0" text="PId" />
+          <TableColumn fx:id="colPName" prefWidth="151.0" text="Patient Name" />
+            <TableColumn fx:id="colPContact" prefWidth="125.0" text="Patient Contact" />
+            <TableColumn fx:id="colAId" prefWidth="98.0" text="AID" />
+            <TableColumn fx:id="colADate" prefWidth="109.0" text="ADate" />
+            <TableColumn fx:id="colATime" prefWidth="87.0" text="ATime" />
+            <TableColumn fx:id="colDId" prefWidth="100.0" text="DID" />
+            <TableColumn fx:id="colDName" prefWidth="145.0" text="Doctor Name" />
+            <TableColumn fx:id="colCharges" prefWidth="92.0" text="Charges" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="sendMail" layoutX="587.0" layoutY="666.0" onAction="#sendMail_OnAction" prefHeight="37.0" prefWidth="141.0" styleClass="button-send" stylesheets="@../style/styles.css" text="Send Mail">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="744.0" layoutY="666.0" onAction="#saveAppointment_OnAction" prefHeight="37.0" prefWidth="169.0" styleClass="button-doctor" stylesheets="@../style/styles.css" text="Save Appointment">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <Pane layoutX="9.0" layoutY="66.0" prefHeight="400.0" prefWidth="920.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <AnchorPane layoutX="194.0" layoutY="76.0" prefHeight="47.0" prefWidth="281.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtPName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="258.0" promptText="Saman Kumara" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Patient Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="484.0" layoutY="76.0" prefHeight="47.0" prefWidth="113.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtPAge" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="87.0" promptText="00" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Patient Age" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="623.0" layoutY="76.0" prefHeight="47.0" prefWidth="258.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtPContact" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="229.0" promptText="276274224" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Patient Contact" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="194.0" layoutY="191.0" prefHeight="47.0" prefWidth="281.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtDName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="258.0" promptText="Saman Kumara" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Doctor Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="745.0" layoutY="190.0" prefHeight="47.0" prefWidth="129.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtDFees" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="105.0" promptText="000.00" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Doctor Fee" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="484.0" layoutY="190.0" prefHeight="47.0" prefWidth="214.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtDSpecialize" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="229.0" promptText="Ordinary" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Specialization" />
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="cmbPatientIds" layoutX="14.0" layoutY="98.0" prefHeight="37.0" prefWidth="162.0" promptText="Patient Id" />
+            <ComboBox fx:id="cmbDoctorIds" layoutX="14.0" layoutY="196.0" prefHeight="37.0" prefWidth="162.0" promptText="Doctor Id" />
+            <JFXButton fx:id="btnAppointment" layoutX="721.0" layoutY="351.0" onAction="#addAppointment_OnAction" prefHeight="37.0" prefWidth="162.0" styleClass="button-save" stylesheets="@../style/styles.css" text="Add Appointment">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnClear" layoutX="565.0" layoutY="349.0" onAction="#clearAppointment_OnAction" prefHeight="37.0" prefWidth="129.0" styleClass="button-search" stylesheets="@../style/styles.css" text="Clear">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="254.0" layoutY="258.0" prefHeight="60.0" prefWidth="162.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtAId" layoutX="13.0" layoutY="8.0" onAction="#searchAppointments_OnAction" onKeyReleased="#textFields_Key_Released" prefHeight="47.0" prefWidth="141.0" promptText="A00-001" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Appoint ID" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="437.0" layoutY="258.0" prefHeight="60.0" prefWidth="229.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Appoint Date" />
+                  <JFXDatePicker fx:id="txtApDate" layoutX="4.0" layoutY="14.0" prefHeight="37.0" prefWidth="218.0" promptText="01/01/2021" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="719.0" layoutY="258.0" prefHeight="60.0" prefWidth="162.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Appoint Time" />
+                  <JFXTimePicker fx:id="txtApTime" layoutX="13.0" layoutY="8.0" prefHeight="47.0" prefWidth="141.0" promptText="10.00" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="194.0" layoutY="132.0" prefHeight="47.0" prefWidth="535.0" styleClass="textPane" stylesheets="@../style/styles.css">
+               <children>
+                  <TextField fx:id="txtPMail" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="472.0" promptText="276274224" styleClass="textField" stylesheets="@../style/styles.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" stylesheets="@../style/styles.css" text="Patient Mail" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="14.0" layoutY="49.0" prefHeight="2.0" prefWidth="896.0" />
+            <Label fx:id="lblDate" layoutX="178.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="2021-09-01">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="11.0" prefHeight="25.0" prefWidth="92.0" text="Today :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="621.0" layoutY="11.0" prefHeight="34.0" prefWidth="98.0" text="Time :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="683.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="11.23.10" textFill="#110000">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="10.0" layoutY="661.0" prefHeight="47.0" prefWidth="141.0" text="Total Charge  :" textFill="#f80202">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtTotal" layoutX="151.0" layoutY="662.0" prefHeight="47.0" prefWidth="127.0" text="00.00" textFill="#f80202">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

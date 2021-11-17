@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainContext" prefHeight="781.0" prefWidth="1130.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInPageController">
+   <children>
+      <ImageView fitHeight="445.0" fitWidth="616.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/LOg%20In.png" />
+         </image></ImageView>
+      <Label alignment="CENTER" layoutX="51.0" layoutY="44.0" prefHeight="56.0" prefWidth="1020.0" text="Doctor Appointment System">
+         <font>
+            <Font name="Book Antiqua Bold" size="43.0" />
+         </font>
+      </Label>
+      <Pane layoutX="654.0" layoutY="127.0" prefHeight="569.0" prefWidth="454.0" style="-fx-background-color: #f5f5dc; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: blue;">
+         <children>
+            <JFXTextField fx:id="txtUserName" layoutX="90.0" layoutY="284.0" onAction="#moveToPassword" prefHeight="31.0" prefWidth="312.0" promptText="User Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPassword" layoutX="92.0" layoutY="356.0" prefHeight="31.0" prefWidth="312.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIcon iconName="USER" layoutX="35.0" layoutY="327.0" size="3em" wrappingWidth="38.0" />
+            <FontAwesomeIcon iconName="KEY" layoutX="35.0" layoutY="397.0" size="3em" wrappingWidth="37.99999564886093" />
+            <JFXButton buttonType="RAISED" layoutX="128.0" layoutY="437.0" onAction="#LogIn_OnAction" prefHeight="48.0" prefWidth="204.0" style="-fx-background-color: #6495ed; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" text="Log In" textFill="#ffeeee">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="168.0" fitWidth="185.0" layoutX="143.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/UserLogIn.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="519.0" prefHeight="25.0" prefWidth="293.0" text="Copyright © 2021 Doctor Appointment">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="541.0" prefHeight="25.0" prefWidth="377.0" text="All Rights Reserved Designed By Binoodh Madhusanka">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="13.0" layoutY="754.0" prefHeight="25.0" prefWidth="100.0" text="Version 1.0.1">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
